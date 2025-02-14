@@ -1,0 +1,70 @@
+
+<html>
+
+    <head></head>
+
+    <body>
+
+      
+
+        <script>
+
+            // Die Damen befinden sich auf einem nxn Schachbrett
+            // Gesucht sind die Koordinaten (x, y) (von null indexiert)
+
+            const BRETT = []
+
+
+            // Funktion die testet, ob 2 Damen sich gegenseitig schlagen können
+            function kann_schlagen(dame1X, dame1Y, dame2X, dameY) {
+                return dame1X == dame2X || dame1Y == dame2Y || Math.abs(dame1X - dame2X) == Math.abs(dame1Y - dame2Y);
+            }
+
+
+            // Fügt eine Dame zu deinem Testbrett hinzu
+            function füge_dame_hinzu(xPos, yPos) {
+                BRETT.push([xPos, yPos]);
+            }
+
+
+            // Entfernt eine Dame von deinem Testbrett
+            function entferne_dame_von(xPos, yPos) {
+                BRETT.filter(dame => dame[0] != xPos && dame[1] != yPos);
+            }
+
+
+            // Diese Funktion soll true zurückgeben, wenn die Damen auf dem Brett sich nicht schlagen können
+            function ist_brett_sicher() {
+                // TODO: Implementiere diese Funktion, du wirst sie brauchen
+            }
+
+
+            // Diese Funktion soll das Damenproblem lösen, es soll die obigen Funktionen verwenden und die Lösung auf dem Testbrett stehen lassen
+            function löse_damen_problem(n) {
+                // TODO: Implementiere diese Funktion
+            }
+
+
+            // Gibt eine Spielbrett mit allen Koordinaten der Damen aus
+            function gebe_aus() {
+                for (let i = 0; i < BRETT.length; i++) {
+                    console.log("Dame " + i + " befindet sich auf (" + BRETT[i][0] + ", " + BRETT[i][1] + ")");
+                }
+            }
+
+
+
+            // Initialaufruf
+            löse_damen_problem(4);
+            gebe_aus();
+
+         
+
+            
+
+
+        </script>
+
+    </body>
+
+</html>
